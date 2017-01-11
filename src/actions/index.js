@@ -1,6 +1,6 @@
 import { CHANGE_AUTH } from './types';
 
-export function autenticate(isLoggedIn) {
+export function authenticate(isLoggedIn) {
   return {
     type: CHANGE_AUTH,
     payload: isLoggedIn
