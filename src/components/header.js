@@ -5,11 +5,15 @@ import * as actions from '../actions';
 
 class Header extends Component {
   authButton() {
-    if(this.props.authenticated) {
-      return <button onClick={() => this.props.authenticate(false) }>Sign Out</button>;
+    if (this.props.authenticated) {
+      return (
+        <button onClick={() => this.props.authenticate(false)}>Sign Out</button>
+      );
     }
 
-    return <button onClick={() => this.props.authenticate(true) }>Sign In</button>;
+    return (
+      <button onClick={() => this.props.authenticate(true)}>Sign In</button>
+    );
   }
 
   render() {
@@ -22,9 +26,7 @@ class Header extends Component {
           <li className="nav-item">
             <Link to="/resources">Resources</Link>
           </li>
-          <li className="nav-item">
-            {this.authButton()}
-          </li>
+          <li className="nav-item">{this.authButton()}</li>
         </ul>
       </nav>
     );

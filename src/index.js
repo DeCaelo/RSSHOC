@@ -18,5 +18,6 @@ ReactDOM.render(
         <Route path="resources" component={requireAuth(Resources)} />
       </Route>
     </Router>
-  </Provider>
-  , document.querySelector('.container'));
+  </Provider>,
+  document.querySelector('.container'),
+);
